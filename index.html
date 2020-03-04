@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            background-color: brown;
+            color: wheat;
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            padding: 25px;
+        }
+        h1{
+            font-weight: bold;
+            background-color: orange;
+            color: white;
+        }
+    <!-- pseudo Class= hover -->
+        h3{
+            color: orchid;
+        }
+        h3:hover{
+            color: goldenrod;
+            cursor: pointer;
+            font-size: 30px;
+            background-color: gray;
+        }
+        .diff:hover{
+            background-color: indigo;
+        }
+    /* <!-- pseudo Class= focus --> */
+        input:focus{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    /* Styling on any specific child */
+    li:first-child{
+        background-color: indianred;
+    }
+    li:last-child{
+        background-color: tomato;
+    }
+    li:nth-child(2n){
+        /* '2n' defines even Class */
+        background-color: yellowgreen;
+        font-weight: bold;
+
+    }
+    li:nth-child(2n+1){
+        color:blue;
+    }
+
+    /* pseudo class on anchor tag= visited */
+    a:visited{
+        color: red;;
+    }
+
+    /* pseudo element need double '::' */
+    .special-effect::before{
+        content: "Good Bye ";
+        color: tomato;
+        font-weight: bold;
+    }
+    .fam>li::after{
+        content: " ❤️";
+    }
+
+    /* css position static relative absolute fixed */
+    p{
+        font-weight: bold;
+    }
+    .container{
+        background-color: lightblue;
+
+    }
+    div{
+        height: 100px;
+        width: 100px;
+    }
+    .first{
+        background-color: lightcoral;
+    }
+    .second{
+        background-color: lightseagreen;
+    }
+    .third{
+        background-color: maroon;
+    }
+    .relative-second{
+        position: relative;
+        left: 20px;
+        top: 20px;
+        /* top: 100px; */
+    }
+    .absolute-second{
+        position: absolute;
+        left: 120px;
+
+    }
+    
+    
+    /* position- fixed */
+
+    .new{
+        background-color: darkblue;
+    }
+    .fix{
+        position:fixed;
+        top:0;
+        left:100px;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="title">Pseudo Class</h1>
+    <!-- pseudo Class= hover -->
+    <h1>1.pseudo Class= hover</h1>
+    <h3>This is Advance CSS part</h3>
+    <h3>Let's Hover on this writings</h3>
+    <h3 class="diff">This is different</h3>
+
+    <!-- pseudo Class= focus -->
+    <h1>2.pseudo Class= focus</h1>
+    <input type="text" name="email">
+    <br>
+    <input type="password" name="password">
+
+    <!-- Styling on any Specific or n-th child below the main tag- child position should be mentioned on css -->
+    <h1>3.Styling on any specific or nth child</h1>
+    <ul>
+        <li>Rahim</li>
+        <li>Karim</li>
+        <li>Jodu</li>
+        <li>Modu</li>
+        <li>Jamil</li>
+        <li>Kamil</li>
+        <li>Shamil</li>
+    </ul>
+    <!-- For cheackig a Website whether it's already visited or not -->
+    <h1>4.pseudo class on anchor tag= visited</h1>
+    <a href="https://github.com/mahfuz-dev/PORTFOLIO-WEBSITE/settings">Mahfuz's Work</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=d7iI-3p0koM">Why You Missed Fajr?</a>
+
+    <!-- Pseudo Element -->
+    <h1 class="title">Pseudo Elements </h1>
+    
+    <h4 class="special-effect">Sadness</h4>
+    <h4  class="special-effect">Depression</h4>
+    <h4  class="special-effect">Anxity</h4>
+    <h2>Family:</h2>
+    <ul class="fam">
+        <li>Father</li>
+        <li>Mother</li>
+        <li>Sister</li>
+        <li>Brother</li>
+        <li>Mamas</li>
+        <li>Khalas</li>
+        <li>Fufus</li>
+        <li>and Others</li>
+    </ul>
+
+    <!-- css position static relative absolute fixed -->
+    <h1 class="title">CSS Position - 'Static' , 'Relative' , 'Absolute' , 'Fixed'</h1>
+
+    <h1> position-relative</h1>
+    <p>By default each of the div's position is 'Static'</p>
+    <!-- position- 'relative' -->
+    <section class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </section>
+    <p>If we fix the position of a div in 'Relative' then it's changable from it's main position.By using 'left','right','top','bottom' on the element position can be changed</p>
+    <section class="container">
+        <div class="first"></div>
+        <div class="second relative-second"></div>
+        <div class="third"></div>
+    </section>
+
+    <!-- position- 'absolute' -->
+    <h1> position- absolute</h1>
+    <p>By Absolute the position will be changed compares to the Parent tag/class.Here the parent is 'container'.But here the initial position of the element will be vanished permanently after changing the position with 'absolute'</p>
+    <section class="container">
+        <div class="first"></div>
+        <div class="second absolute-second"></div>
+        <div class="third"></div>
+    </section>
+
+    
+    <!-- position- fixed -->
+    <h1>position- fixed </h1>
+    <p>The 'position:fixed;' will make an element fixed to it's position through the whole page.</p>
+      <section class="container">
+        <div class="first"></div>
+        <div class="second fix">I'm position Fixed</div>
+        <div class="third"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+        <div class="new"></div>
+    </section>
+
+    <!-- order style priority -->
+    <h1 class="title">CSS specificity style order style priority</h1>
+    <p>CSS styling has priority order we know how it works.</p>
+    <p>Inline CSS is the most powerful over everything.But we can beat that in external CSS by adding '!important' beside the style action even there is other style in the inline css of that element</p>
+    <p>Example:h1{ color:red !important; }</p>
+    <p>If there are multiple '!important'(CSS specificity) in css on the same tag's styling.Then the style will be applied according to the priority order. But CSS specificity is not recommended to use  </p>
+</body>
+</html>
